@@ -1,0 +1,93 @@
+﻿@model IEnumerable<MovieShop.Models.MovieModel>
+
+@{
+    ViewBag.Title = "ShowOrderList";
+}
+
+<h2>ShowOrderList</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Director)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LeadActor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            BlaBlaBla
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Session["MoviesList"] as List<int>)
+    {
+        <tr>
+
+            <td>
+                @item
+            </td>
+            <td>
+                
+                @*@Html.DisplayFor(db.)*@
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.Director)*@
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.ReleaseYear)*@
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.LeadActor)*@
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.Price)*@
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.ImageUrl)*@
+            </td>
+        </tr>
+    }
+</table>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <ul>
+                @foreach (int movid in Session["MoviesList"] as List<int>)
+                {
+                    <li>@movid</li>
+                }
+            </ul>
+        </div>
+        <div class="col-sm-2">
+                <ul>
+                    @foreach (int all in Session["MoviesList"] as List<int>)
+                    {
+                        <li>@Session["MoviesList"].ToString()</li>
+                    }
+                </ul>
+            </div>
+        @*<div class="col-sm-2">
+                <ul>
+                    @foreach (string skill in ViewBag.BaseSkills)
+                    {
+                        <li>@skill</li>
+                    }
+                </ul>
+            </div>*@
+
+    </div>
+</div>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MovieShop.Models.MovieModel>
+@{
+    ViewBag.Title = "MoviesList";
+}
+<head>
+    <script src="~/Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if (sessionStorage['MovieListPage'] == document.URL) {
+                $(document).scrollTop(sessionStorage['MovieListscrollTop']);
+            }
+        });
+
+        $(document).scroll(function () {
+            sessionStorage['MovieListPage'] = document.URL;
+            sessionStorage['MovieListscrollTop'] = $(document).scrollTop();
+        });
+    </script>
+</head>
+<div class="col-sm-12">
+    @foreach (var movie in Model)
+    {
+        @Html.Partial("_MoviesList",movie)
+    }
+
+</div>

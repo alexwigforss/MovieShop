@@ -1,0 +1,103 @@
+﻿@model IEnumerable<MovieShop.Models.ViewModels.MovieListVM>
+
+@{
+    ViewBag.Title = "DisplayCart";
+}
+
+@if ((int)Session["IsOrder"] == 0)
+{
+    <h2>Your Cart</h2>
+}
+else
+{
+    <h2>Order Summary!</h2>
+}
+<head>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('#POBtn').click(function () {
+                $('#CustDiv').show();
+                $('#POBtn').prop('disabled', true);
+            });
+
+            $('#ValBtn').click(function () {
+                var usermail = $('#EmailTxt').val();
+                if (usermail != '') {
+                    $.ajax({
+                        url: "/Customer/ValidateCustomer",
+                        data: { email: usermail },
+                        contentType: 'application/html;charset=utf-8',
+                        type: 'GET',
+                        dataType: 'html'
+                    }).done(function (result) {
+                        $('#ResDiv').html(result);
+                    });
+                }
+                else {
+                    $('#ResDiv').html("<p style='color:red'>Please enter E-mail address before you click validate</p>");
+                }
+            });
+            $
+
+        });
+    </script>
+</head>
+
+<table class="table">
+    <tr>
+        <th>Movie</th>
+        <th>Release Year</th>
+        <th>No.of.Copies</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Movie</td>
+            <td>@item.ReleaseYear</td>
+            @if ((int)Session["IsOrder"] == 0)
+            {
+                <td>
+                    <button onclick="location.href='@Url.Action("AddtoCart", new { MovieId = item.MovieId, Add = 0, IsCart = 1 })'">-</button>
+                    @item.NoofCopies
+                    <button onclick="location.href='@Url.Action("AddtoCart", new { MovieId = item.MovieId, Add = 1, IsCart = 1 })'">+</button>
+                </td>
+            }
+            else
+            {
+                <td>
+                    @item.NoofCopies
+                </td>
+            }
+            <td>@item.Price</td>
+        </tr>
+    }
+
+    <!--<tr> <td colspan="4" align="right"><b>Total Price:</b>@ViewBag.TotalPrice</td></tr>
+    <tr>
+        <td colspan="2" align="left"><label id="Email_Input">Email</label><input type="Email"></td>
+        <td colspan="2" align="right"><input type="button" value="Submit" onclick="location.href='@Url.Action("CreateOrder")'" /></td>
+    </tr>-->
+    @*<button class="btn btn-primary pull-right" onclick="location.href='@Url.Action("CreateOrder")'">Checkout</button>*@
+    @if ((int)Session["IsOrder"] == 0)
+    {
+        <tr>
+            <td colspan="4" align="right"><button id="POBtn">Place Order</button></td>
+        </tr>
+    }
+    else
+    {
+        <tr>
+            <td colspan="4" align="right"><button id="POBtn">Confirm Order</button></td>
+        </tr>
+    }
+</table>
+
+<div id="CustDiv" hidden>
+    <p style="color:firebrick;font-weight:bold">Enter your email address and click on validate to proceed with the order!</p>
+    <label>Enter e-mail Address</label>
+    <input type="text" id="EmailTxt" />
+    <button id="ValBtn">Validate</button>
+</div>
+<div id="ResDiv"></div>

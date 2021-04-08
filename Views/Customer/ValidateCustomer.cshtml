@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    @if ((int)Session["Valid"] == 0)
+    {
+        <div>
+            <h3>@Session["Msg"]</h3>
+            <p>Please click on Register to continue!</p>
+            <button class="btn btn-danger" onclick="location.href = '@Url.Action("Create","Customer")'">Register</button>
+        </div>
+    }
+    else
+    {
+    <div>
+    <h3>@Session["Msg"]</h3>
+    <p>Please click on Proceed to continue!</p>
+    <button class="btn btn-danger" onclick="location.href = '@Url.Action("DisplayCart","MovieModels",new { IsOrder=1})'">Proceed</button>
+    </div>
+    }
+
+</body>
+</html>
+
