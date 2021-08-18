@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MovieShop.Models.ViewModels.OrderHistoryPVVM>
+
+@{
+    ViewBag.Title = "CheckOrders";
+}
+
+<h2>CheckOrders</h2>
+
+<form>
+
+    <div class="col-sm-12">
+        <label>Email:</label>
+        <input type="text" placeholder="Enter your Email" name="email" />
+        <button>Check Orders</button>
+    </div>
+
+
+    @if (Model.Count() > 0)
+    {
+        <div>Hello @ViewBag.CustomerName! Here is your order history.</div>
+        foreach (var order in Model)
+        {
+            @Html.Partial("_CheckOrdersforPV",order)
+        }
+    }
+</form>

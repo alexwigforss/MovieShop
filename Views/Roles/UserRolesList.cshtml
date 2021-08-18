@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "UserRolesList";
+}
+
+<h2>UserRolesList</h2>
+
+@using (Html.BeginForm())
+{
+<table>
+    <tr>
+        <th>
+            Current Registered Roles
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <ol>
+                @foreach (var item in ViewBag.Roles)
+                {
+                    <li>@item.Name</li>
+                }
+            </ol>
+        </td>
+    </tr>
+    @*@if (this.User.IsInRole("Admin"))
+    {
+        <tr>
+            <td>
+                <div>
+                    @Html.ActionLink("Add New Role", "CreateRole", "Account")
+                </div>
+                <span style="color:red;">@ViewBag.Message</span>
+            </td>
+        </tr>
+    }*@
+</table>
+}
+
+

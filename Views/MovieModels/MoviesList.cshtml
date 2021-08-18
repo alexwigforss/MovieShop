@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MovieShop.Models.MovieModel>
+﻿@model IEnumerable<MovieShop.Models.Movie>
 @{
     ViewBag.Title = "MoviesList";
 }
@@ -17,10 +17,25 @@
         });
     </script>
 </head>
+
+@if (ViewBag.Count == 0)
+{
+    if (ViewBag.Flag == 1)
+    {
+        <div style="color:blue"><h3>Please Enter Some Text To Search!</h3></div>
+    }
+    else
+    {
+        <div style="color:red"><h3>No results Found!</h3></div>
+    }
+}
+else
+{
+}
+
 <div class="col-sm-12">
     @foreach (var movie in Model)
     {
-        @Html.Partial("_MoviesList",movie)
+        @Html.Partial("_MoviesList", movie)
     }
-
 </div>

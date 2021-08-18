@@ -21,21 +21,48 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Movies", "Index", "MovieModels")</li>
-                    <li>@Html.ActionLink("Add Movie", "Create", "MovieModels")</li>
+                    <li>@Html.ActionLink("Start Page", "FrontPage", "MovieModels")</li>
+                    <li>@Html.ActionLink("Search Movies", "SearchMovies", "MovieModels")</li>
+                    <li>@Html.ActionLink("Pageinated List", "PageinateMovies", "MovieModels", new { page = 1 }, null)</li>
+                    
+                    <li>@Html.ActionLink("Order History", "CheckOrders", "Customer")</li>
+
+                    @*@if (!this.User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("Manage Roles", "UserRolesList", "Roles")</li>
+                    }*@
+                    @if (this.User.IsInRole("Admin"))
+                    {
+                        
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Admin
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Manage Roles", "CreateRole", "Account")</li>
+                                <li>@Html.ActionLink("Add Movie", "Create", "MovieModels")</li>
+                                <li>@Html.ActionLink("Available Movies", "Index", "MovieModels")</li>
+                            </ul>
+                        </li>
+                    }
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My Movie Application</p>
-        </footer>
+        @if (ViewBag.Title != "SearchMovies")
+        {
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Movie Shop Application</p>
+            </footer>
+        }
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

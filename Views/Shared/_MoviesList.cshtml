@@ -1,25 +1,29 @@
-﻿<div class="panel panel-default col-sm-5 col-md-4 col-lg-3" style="border:solid 3px;background-color:olive;margin:15px">
+﻿@{
+    int cart = 0;
+}
+@if (ViewBag.Title == "SearchMovies")
+{
+    cart = 2;
+}
+else if (ViewBag.Title == "PageinateMovies")
+{
+    cart = 3;
+}
 
+<div class="panel panel-default col-sm-5 col-md-4 col-lg-3" style="border:solid 3px;background-color:olive;margin:15px">
+    
     <div class="panel-heading" style="background-color: #71711a">
-        <img src="@Model.ImageUrl" alt="No Image" />
-        <button class="btn btn-default" style="margin-top:10px;" onclick="location.href='@Url.Action("AddToCart","MovieModels",new { MovieId=Model.Id,Add=1,IsCart=0})'">Add to Cart</button>
+        <img src="@Model.ImageUrl" alt="No Image" onerror="this.onerror=null;this.src='/Img/noimage.png'" />
+        <button class="btn btn-default" style="margin-top:10px;" onclick="location.href='@Url.Action("AddToCart","MovieModels",new { MovieId=Model.Id,Add=1,IsCart=cart})'">Add to Cart</button>
     </div>
 
-    <div class="panel-body" style="width: 200px; height: 320px; color: #0c2461;">
- <div style="width:200px;height:300px;word-wrap:break-word;">
-
-     @*<h4><b>Title: </b>@Model.Title<br /></h4>
-     <h4><b>Director: </b>@Model.Director<br /></h4>
-     <h4><b>Lead Actor: </b>@Model.LeadActor<br /></h4>
-     <h4><b>Release Year: </b>@Model.ReleaseYear<br /></h4>
-     <h4><b>Price: </b>@Model.Price<br /></h4>*@
-
-<h4><span class="label label-default" style="word-wrap:break-word;width:200px;white-space:pre-wrap">Title: @Model.Title</span></h4>
-<h4><span class="label label-default">Director: @Model.Director</span></h4>
-<h4><span class="label label-default">Lead Actor: @Model.LeadActor</span></h4>
-<h4><span class="label label-default">Release Year: @Model.ReleaseYear</span></h4>
-<h4><span class="label label-default">Price: @Model.Price</span></h4>
-  </div> 
-
-</div>
+    @*<div class="panel-body" style="width: auto; min-height: 300px; color: #0c2461;">*@
+        <div style="width: auto; height: 250px; overflow-y: auto; word-wrap: break-word;">
+            <h4><span class="spancls"><b>Title: </b> @Model.Title</span></h4>
+            <h4><span class="spancls"><b>Director: </b> @Model.Director</span></h4>
+            <h4><span class="spancls"><b>Lead Actor: </b> @Model.LeadActor</span></h4>
+            <h4><span class="spancls"><b>Release Year: </b> @Model.ReleaseYear</span></h4>
+            <h4><span class="spancls"><b>Price: </b> @Model.Price kr</span></h4>
+        </div> 
+    @*</div>*@
 </div>

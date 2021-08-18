@@ -1,0 +1,31 @@
+﻿@*@{
+    ViewBag.Title = "SearchIndex";
+}
+
+<head>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('#SearchDiv').show();
+            $('#SrcBtn').click(function () {
+                var usersearch = $('#SearchTxt').val();
+                if (usersearch != '') {
+                    $('#ResDiv').html("<p style='color:blue'>" + usersearch + "</p>");
+                }
+                else {
+                    $('#ResDiv').html("<p style='color:blue'>Empty search string. Try again.</p>");
+                }
+            });
+            $
+        });
+    </script>
+</head>
+
+<div id="SearchDiv" hidden>
+    <label>For what are you searching? </label>
+    <input type="text" id="SearchTxt" />
+    <button id="SrcBtn">Search</button>
+</div>
+
+<div id="ResDiv"></div>*@
+

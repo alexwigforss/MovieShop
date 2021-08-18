@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "SearchMovies";
+}
+
+<head>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('#SrchBtn').click(function () {
+                $.fn.LoadMovies();
+            });
+
+            $.fn.LoadMovies = function () {
+
+                var searchtext = $("#SrchTxt").val();
+                if (searchtext)
+
+                $.ajax({
+                    url: "/MovieModels/FilterMoviesList",
+                    data: { srctxt: searchtext },
+                    contentType: 'application/html;charset=utf-8',
+                    type: 'GET',
+                    dataType: 'html'
+                }).done(function (result) {
+                    $('#ListDiv').html(result);
+                });
+            }
+            var movie = '@Request.RequestContext.HttpContext.Session["Search"]';
+            
+            if (movie != '')
+            {
+                $("#SrchTxt").val(movie);
+                $.fn.LoadMovies();
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="SrchTxt" placeholder="Enter Title to search"/>
+        <button id="SrchBtn">Search</button>
+    </div>
+    <div id="ListDiv"></div>
+</body>

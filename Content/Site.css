@@ -1,5 +1,4 @@
 ﻿body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -19,10 +18,99 @@
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
+
 textarea {
     max-width: 280px;
 }
+
 img {
     height:200px;
     width:200px;
+}
+
+img.fpimg {
+    height: 14vw;
+    width: 14vw;
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        padding-top: 50px;
+    }
+
+    img.fpimg {
+        height: 12.5vw;
+        width: 12.5vw;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    body {
+        padding-top: 50px;
+    }
+
+    img.fpimg {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+.spancls {
+    word-wrap: break-word;
+    color: white;
+    font-weight: bold;
+    font-size: small;
+    background-color: #4c5f4c;
+    /*background-color: darkgreen;*/
+    padding: 3px;
+    width: 250px;
+}
+
+.spstyle {
+    background-color: olive;
+}
+
+table {
+    word-wrap: break-word;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+span {
+    word-wrap: break-word;
+}
+
+/* width */
+body::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    background: #556b2f;
+}
+
+::-webkit-scrollbar-track {
+    background: olive;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+    /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

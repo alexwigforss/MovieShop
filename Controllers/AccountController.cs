@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MovieShop.Models;
@@ -15,6 +16,7 @@ namespace MovieShop.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -73,24 +75,34 @@ namespace MovieShop.Controllers
                 return View(model);
             }
 
+            // To Validate User With Provided Email And Get Related Username from db and pass it.
+            var usermanager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            var user = await usermanager.FindByEmailAsync(model.Email);
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
-            switch (result)
+            if(user!=null)
             {
-                case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
-                case SignInStatus.LockedOut:
-                    return View("Lockout");
-                case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-                case SignInStatus.Failure:
-                default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
-                    return View(model);
+                var result = await SignInManager.PasswordSignInAsync(user.UserName, model.Password, model.RememberMe, shouldLockout: false);
+                switch (result)
+                {
+                    case SignInStatus.Success:
+                        return RedirectToLocal(returnUrl);
+                    case SignInStatus.LockedOut:
+                        return View("Lockout");
+                    case SignInStatus.RequiresVerification:
+                        return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                    case SignInStatus.Failure:
+                    default:
+                        ModelState.AddModelError("", "Invalid login attempt.");
+                        return View(model);
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", "Invalid login attempt.");
+                return View(model);
             }
         }
-
         //
         // GET: /Account/VerifyCode
         [AllowAnonymous]
@@ -139,6 +151,7 @@ namespace MovieShop.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.Roles = new SelectList(db.Roles.Where(r => !r.Name.Contains("Admin")).ToList(),"Name","Name");
             return View();
         }
 
@@ -151,20 +164,22 @@ namespace MovieShop.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    await UserManager.AddToRoleAsync(user.Id, model.UserRole);
+                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
-                    return RedirectToAction("Index", "Home");
+                    
+                    return View("RegisterConfirm");
                 }
+                ViewBag.Roles = new SelectList(db.Roles.Where(r => !r.Name.Contains("Admin")).ToList(), "Name", "Name");
                 AddErrors(result);
             }
 
@@ -216,9 +231,34 @@ namespace MovieShop.Controllers
                 // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
                 // return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
-
+            
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+        // GET: /Account/ForgotPasswordConfirmation
+        [Authorize(Roles ="Admin")]
+        public ActionResult CreateRole()
+        {
+            ViewBag.Roles = db.Roles.ToList();
+            return View();
+        }
+        [HttpPost]        
+        public ActionResult CreateRole(CreateRoleViewModel model)
+        {
+            var rolemanager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
+            if (!rolemanager.RoleExists(model.Name))
+            {
+                var role = new IdentityRole();
+                role.Name = model.Name;
+                var res = rolemanager.Create(role);
+                if (res.Succeeded)
+                {
+                    return RedirectToAction("CreateRole");
+                }
+            }
+            ViewBag.Message = "Role already exist! Please check the list!";
+            ViewBag.Roles = db.Roles.ToList();
+            return View();
         }
 
         //
@@ -392,7 +432,7 @@ namespace MovieShop.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("MoviesList", "MovieModels");
         }
 
         //
@@ -449,7 +489,7 @@ namespace MovieShop.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("MoviesList", "MovieModels");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

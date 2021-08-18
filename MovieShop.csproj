@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MovieShop</RootNamespace>
     <AssemblyName>MovieShop</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,16 +55,14 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -108,6 +107,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -172,39 +172,44 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MovieModelsController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103231214535_InitialDB.cs" />
-    <Compile Include="Migrations\202103231214535_InitialDB.Designer.cs">
-      <DependentUpon>202103231214535_InitialDB.cs</DependentUpon>
+    <Compile Include="Migrations\202104090715141_InitialSetup.cs" />
+    <Compile Include="Migrations\202104090715141_InitialSetup.Designer.cs">
+      <DependentUpon>202104090715141_InitialSetup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103231237206_AddTest.cs" />
-    <Compile Include="Migrations\202103231237206_AddTest.Designer.cs">
-      <DependentUpon>202103231237206_AddTest.cs</DependentUpon>
+    <Compile Include="Migrations\202104090925456_AddNoofCopies.cs" />
+    <Compile Include="Migrations\202104090925456_AddNoofCopies.Designer.cs">
+      <DependentUpon>202104090925456_AddNoofCopies.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103231244510_AddTestModel.cs" />
-    <Compile Include="Migrations\202103231244510_AddTestModel.Designer.cs">
-      <DependentUpon>202103231244510_AddTestModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103231245396_DropTestModel.cs" />
-    <Compile Include="Migrations\202103231245396_DropTestModel.Designer.cs">
-      <DependentUpon>202103231245396_DropTestModel.cs</DependentUpon>
+    <Compile Include="Migrations\202104090938541_Add-TotaalPrice.cs" />
+    <Compile Include="Migrations\202104090938541_Add-TotaalPrice.Designer.cs">
+      <DependentUpon>202104090938541_Add-TotaalPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\MovieModel.cs" />
-    <Compile Include="Models\OrderModel.cs" />
-    <Compile Include="Models\OrderRowModel.cs" />
-    <Compile Include="Models\TestModel.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\ViewModels\MostSoldVM.cs" />
+    <Compile Include="Models\ViewModels\OrderHistoryListVM.cs" />
+    <Compile Include="Models\ViewModels\OrderHistoryPVVM.cs" />
+    <Compile Include="Models\OrderRow.cs" />
     <Compile Include="Models\ViewModels\MovieListVM.cs" />
+    <Compile Include="Models\ViewModels\OrderHistoryVM.cs" />
+    <Compile Include="Models\ViewModels\PaginateVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\MovieShopNewDB.mdf" />
+    <Content Include="App_Data\MovieShopNewDB_log.ldf">
+      <DependentUpon>MovieShopNewDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -213,6 +218,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Img\noimage.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -277,9 +283,22 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\ValidateCustomer.cshtml" />
     <Content Include="Views\Customer\NewUserSuccess.cshtml" />
+    <Content Include="Views\MovieModels\SubmitOrder.cshtml" />
+    <Content Include="Views\Customer\CheckOrders.cshtml" />
+    <Content Include="Views\Shared\_CheckOrders.cshtml" />
+    <Content Include="Views\Customer\CheckOrdersforPV.cshtml" />
+    <Content Include="Views\Shared\_CheckOrdersforPV.cshtml" />
+    <Content Include="Views\MovieModels\SearchIndex.cshtml" />
+    <Content Include="Views\MovieModels\SearchMovies.cshtml" />
+    <Content Include="Views\MovieModels\PagedIndex.cshtml" />
+    <Content Include="Views\MovieModels\PageinateMovies.cshtml" />
+    <Content Include="Views\MovieModels\FrontPage.cshtml" />
+    <Content Include="Views\Account\CreateRole.cshtml" />
+    <Content Include="Views\Roles\UserRolesList.cshtml" />
+    <Content Include="Views\Account\RegisterConfirm.cshtml" />
+    <Content Include="Views\Shared\_Caro.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
@@ -296,17 +315,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103231214535_InitialDB.resx">
-      <DependentUpon>202103231214535_InitialDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104090715141_InitialSetup.resx">
+      <DependentUpon>202104090715141_InitialSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103231237206_AddTest.resx">
-      <DependentUpon>202103231237206_AddTest.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104090925456_AddNoofCopies.resx">
+      <DependentUpon>202104090925456_AddNoofCopies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103231244510_AddTestModel.resx">
-      <DependentUpon>202103231244510_AddTestModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103231245396_DropTestModel.resx">
-      <DependentUpon>202103231245396_DropTestModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104090938541_Add-TotaalPrice.resx">
+      <DependentUpon>202104090938541_Add-TotaalPrice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

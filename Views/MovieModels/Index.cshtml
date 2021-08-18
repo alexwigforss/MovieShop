@@ -1,11 +1,11 @@
-﻿@model IEnumerable<MovieShop.Models.MovieModel>
+﻿@model IEnumerable<MovieShop.Models.Movie>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Movie Index";
 }
 
 <h2>Index</h2>
-<div class="panel panel-default col-sm-12 " style="border:solid 3px;background-color:olive;margin:15px">
+<div class="panel col-sm-12 " style="border:solid 3px;background-color:olive;margin:15px">
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
@@ -49,17 +49,15 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
-                <td>
+                <td style="word-break: break-all;">
                     @Html.DisplayFor(modelItem => item.ImageUrl)
-                    @*<div style="word-wrap:break-word">@Html.DisplayFor(modelItem => item.ImageUrl)</div>*@
                 </td>
-                @*<td>
+                <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                     @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>*@
+                </td>
             </tr>
         }
-
     </table>
     </div>

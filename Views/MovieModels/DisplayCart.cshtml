@@ -4,7 +4,7 @@
     ViewBag.Title = "DisplayCart";
 }
 
-@if ((int)Session["IsOrder"] == 0)
+@if ((int)Session["IsSummary"] == 0)
 {
     <h2>Your Cart</h2>
 }
@@ -39,7 +39,6 @@ else
                 }
             });
             $
-
         });
     </script>
 </head>
@@ -56,7 +55,7 @@ else
         <tr>
             <td>@item.Movie</td>
             <td>@item.ReleaseYear</td>
-            @if ((int)Session["IsOrder"] == 0)
+            @if ((int)Session["IsSummary"] == 0)
             {
                 <td>
                     <button onclick="location.href='@Url.Action("AddtoCart", new { MovieId = item.MovieId, Add = 0, IsCart = 1 })'">-</button>
@@ -80,7 +79,8 @@ else
         <td colspan="2" align="right"><input type="button" value="Submit" onclick="location.href='@Url.Action("CreateOrder")'" /></td>
     </tr>-->
     @*<button class="btn btn-primary pull-right" onclick="location.href='@Url.Action("CreateOrder")'">Checkout</button>*@
-    @if ((int)Session["IsOrder"] == 0)
+
+    @if ((int)Session["IsSummary"] == 0)
     {
         <tr>
             <td colspan="4" align="right"><button id="POBtn">Place Order</button></td>
@@ -89,7 +89,7 @@ else
     else
     {
         <tr>
-            <td colspan="4" align="right"><button id="POBtn">Confirm Order</button></td>
+            <td colspan="4" align="right"><button onclick="location.href = '@Url.Action("SubmitOrder")'">Confirm Order</button></td>
         </tr>
     }
 </table>

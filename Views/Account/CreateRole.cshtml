@@ -1,0 +1,39 @@
+﻿@model MovieShop.Models.CreateRoleViewModel
+@{
+    ViewBag.Title = "CreateRole";
+}
+
+<h2>Manage Roles</h2>
+
+@using(Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th>
+                Current Registered Roles
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <ol>
+                   @foreach (var item in ViewBag.Roles)
+                   {
+                       <li>@item.Name</li>
+                   }
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    @Html.LabelFor(m => m.Name)
+                    @Html.TextBoxFor(m => m.Name)
+                    <button>Add</button>
+                </div>
+                <span style="color:red;">@ViewBag.Message</span>
+
+            </td>
+        </tr>
+    </table>
+}
+

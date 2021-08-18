@@ -1,0 +1,46 @@
+﻿@model MovieShop.Models.ViewModels.PaginateVM
+@{
+    ViewBag.Title = "PageinateMovies";
+}
+
+<head>
+    <script src="~/Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ('ViewBag.Url' != null) {
+                sessionStorage['Paginate'] = '@ViewBag.Url';
+            }
+            if (sessionStorage['Paginate'] == document.URL) {
+                $(document).scrollTop(sessionStorage['PaginatescrollTop']);
+            }
+        });
+
+        $(document).scroll(function () {
+            sessionStorage['Paginate'] = document.URL;
+            sessionStorage['PaginatescrollTop'] = $(document).scrollTop();
+        });
+    </script>
+</head>
+
+<div class="col-sm-12">
+    <ul style="align-content:center" class="pagination">
+        @for (int i = 1; i <= Model.PageCount; i++)
+        {
+            <li class="@(i==Model.CurrentPage?"page-item active":"page-item")">
+                <a class="page-link" href="@Url.Action("PageinateMovies","MovieModels",new{page=i })">@i</a>
+            </li>
+        }
+    </ul>
+</div>
+
+<div class="col-sm-12">
+    @foreach (var movie in Model.Movies)
+    {
+        @Html.Partial("_MoviesList", movie)
+    }
+</div>
+
+
+
+
+

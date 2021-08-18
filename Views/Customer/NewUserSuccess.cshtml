@@ -3,7 +3,7 @@
     ViewBag.Title = "NewUserSuccess";
 }
 
-<h2>User Succesfuly Created</h2>
-
-<button onclick="location.href='@Url.Action("DisplayCart","MoviesModels",new { IsOrder = 0})'">Back to Cart</button>
-<button onclick="location.href='@Url.Action("DisplayCart","MoviesModels",new { IsOrder = 1})'">Proceed</button>
+<h2>User Succesfuly Registered @ViewBag.Email</h2>
+Please click on <b>Proceed</b> to continue.
+<button onclick="location.href='@Url.Action("DisplayCart","MoviesModels",new { IsSummary = 1})'">Proceed</button>
+<button onclick="location.href='@Url.Action("DisplayCart","MoviesModels",new { IsSummary = 0})'">Back to Cart</button>

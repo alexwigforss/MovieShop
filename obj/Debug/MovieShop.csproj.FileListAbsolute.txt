@@ -1,0 +1,224 @@
+C:\Users\klex\source\repos\MovieShop\bin\MovieShop.dll.config
+C:\Users\klex\source\repos\MovieShop\bin\MovieShop.dll
+C:\Users\klex\source\repos\MovieShop\bin\MovieShop.pdb
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\csc.exe
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\csc.exe.config
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\csc.rsp
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\csi.exe
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\csi.exe.config
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\csi.rsp
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.AppContext.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Console.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.IO.Compression.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Net.Http.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Net.Sockets.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.ValueTuple.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Xml.XPath.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\vbc.exe
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\vbc.exe.config
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\vbc.rsp
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\VBCSCompiler.exe
+C:\Users\klex\source\repos\MovieShop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\klex\source\repos\MovieShop\bin\Antlr3.Runtime.dll
+C:\Users\klex\source\repos\MovieShop\bin\EntityFramework.dll
+C:\Users\klex\source\repos\MovieShop\bin\EntityFramework.SqlServer.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\klex\source\repos\MovieShop\bin\Newtonsoft.Json.dll
+C:\Users\klex\source\repos\MovieShop\bin\Owin.dll
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.Helpers.dll
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.Mvc.dll
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.Optimization.dll
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.Razor.dll
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.WebPages.dll
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.WebPages.Razor.dll
+C:\Users\klex\source\repos\MovieShop\bin\WebGrease.dll
+C:\Users\klex\source\repos\MovieShop\bin\EntityFramework.xml
+C:\Users\klex\source\repos\MovieShop\bin\EntityFramework.SqlServer.xml
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.Helpers.xml
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.Mvc.xml
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.Optimization.xml
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.Razor.xml
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.WebPages.xml
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\klex\source\repos\MovieShop\bin\System.Web.WebPages.Razor.xml
+C:\Users\klex\source\repos\MovieShop\bin\Newtonsoft.Json.xml
+C:\Users\klex\source\repos\MovieShop\bin\Antlr3.Runtime.pdb
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\klex\source\repos\MovieShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\klex\source\repos\MovieShop\obj\Debug\MovieShop.csprojAssemblyReference.cache
+C:\Users\klex\source\repos\MovieShop\obj\Debug\MovieShop.csproj.CoreCompileInputs.cache
+C:\Users\klex\source\repos\MovieShop\obj\Debug\MovieShop.csproj.CopyComplete
+C:\Users\klex\source\repos\MovieShop\obj\Debug\MovieShop.dll
+C:\Users\klex\source\repos\MovieShop\obj\Debug\MovieShop.pdb
+C:\Users\klex\source\repos\MovieShop\obj\Debug\MovieShop.Migrations.InitialSetup.resources
+C:\Users\klex\source\repos\MovieShop\obj\Debug\MovieShop.csproj.GenerateResource.cache
+C:\Users\klex\source\repos\MovieShop\obj\Debug\MovieShop.Migrations.AddNoofCopies.resources
+C:\Users\klex\source\repos\MovieShop\obj\Debug\MovieShop.Migrations.AddTotaalPrice.resources
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\MovieShop.dll.config
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\MovieShop.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\MovieShop.pdb
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\csc.exe
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\csc.exe.config
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\csc.rsp
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\csi.exe
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\csi.exe.config
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\csi.rsp
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.AppContext.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Console.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.IO.Compression.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Net.Http.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Net.Sockets.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.ValueTuple.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Xml.XPath.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\vbc.exe
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\vbc.exe.config
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\vbc.rsp
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\VBCSCompiler.exe
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Antlr3.Runtime.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\EntityFramework.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\EntityFramework.SqlServer.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Newtonsoft.Json.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Owin.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.Helpers.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.Mvc.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.Optimization.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.Razor.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.WebPages.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.WebPages.Razor.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\WebGrease.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\EntityFramework.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\EntityFramework.SqlServer.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.Helpers.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.Mvc.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.Optimization.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.Razor.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.WebPages.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\System.Web.WebPages.Razor.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Newtonsoft.Json.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Antlr3.Runtime.pdb
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\obj\Debug\MovieShop.Migrations.InitialSetup.resources
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\obj\Debug\MovieShop.Migrations.AddNoofCopies.resources
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\obj\Debug\MovieShop.Migrations.AddTotaalPrice.resources
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\obj\Debug\MovieShop.csproj.GenerateResource.cache
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\obj\Debug\MovieShop.csproj.CoreCompileInputs.cache
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\obj\Debug\MovieShop.csproj.CopyComplete
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\obj\Debug\MovieShop.dll
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\obj\Debug\MovieShop.pdb
+C:\Users\alex\Documents\Visual Studio 2019\MovieShop\obj\Debug\MovieShop.csproj.AssemblyReference.cache

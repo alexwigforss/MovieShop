@@ -20,10 +20,10 @@ namespace MovieShop.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<CustomerModel> Customers { get; set; }
-        public DbSet<MovieModel> Movies { get; set; }
-        public DbSet<OrderModel> Orders { get; set; }
-        public DbSet<OrderRowModel> OrderRows { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderRow> OrderRows { get; set; }
         //public DbSet<TestModel> Tests { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

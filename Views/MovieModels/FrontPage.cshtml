@@ -1,0 +1,105 @@
+﻿@using MovieShop.Models;
+@model dynamic
+@{ var result = Model as Tuple<List<Movie>, List<Movie>, List<Movie>, List<Movie>, List<Order>, List<Movie>>;}
+
+@{
+    ViewBag.Title = "FrontPage";
+    string[] ImgArray = { " ", " ", " ", " ", " " };
+    var x = 0;
+}
+@foreach (var item in result.Item6)
+{
+    ImgArray[x] = item.ImageUrl;
+    x++;
+}
+
+<div class="row panel spstyle">
+
+    <div class="col-sm-6 col-md-4">
+        @Html.Partial("_Caro", ImgArray)
+    </div>
+
+    <div class="col-sm-6 col-md-8 panel-default" style="justify-content:center">
+        <h2>Top Most Popular</h2>
+        <table class="table table-striped">
+            @foreach (var item in result.Item6)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+
+<div class="row panel spstyle">
+    <h3>Newest</h3>
+    <table class="table table-condensed">
+        <tr>
+            @foreach (var item in result.Item2)
+            {
+                <th>@Html.DisplayFor(modelItem => item.Title)</th>
+            }
+        </tr>
+
+        <tr>
+            @foreach (var item in result.Item2)
+            {
+                <td><img class="fpimg" src="@item.ImageUrl" alt="No Image" onerror="this.onerror=null;this.src='/Img/noimage.png'" /></td>
+            }
+        </tr>
+    </table>
+</div>
+
+
+
+<div class="row panel spstyle">
+
+    <h3>Oldest</h3>
+    <table class="table table-condensed">
+        <tr>
+            @foreach (var item in result.Item3)
+            {
+                <th>@Html.DisplayFor(modelItem => item.Title)</th>
+            }
+        </tr>
+
+        <tr>
+            @foreach (var item in result.Item3)
+            {
+                <td><img class="fpimg" src="@item.ImageUrl" alt="No Image" onerror="this.onerror=null;this.src='/Img/noimage.png'" /></td>
+            }
+        </tr>
+    </table>
+</div>
+
+
+<div class="row panel spstyle">
+    <h3>Cheapest</h3>
+    <table class="table table-condensed">
+        <tr>
+            @foreach (var item in result.Item4)
+            {
+                <th>@Html.DisplayFor(modelItem => item.Title)</th>
+            }
+        </tr>
+
+        <tr>
+            @foreach (var item in result.Item4)
+            {
+                <td><img class="fpimg" src="@item.ImageUrl" alt="No Image" onerror="this.onerror=null;this.src='/Img/noimage.png'" /></td>
+            }
+        </tr>
+    </table>
+</div>
+
+
+<div class="row panel spstyle">
+    <h3>Top Dog Customer Is ...d.r.u.m.r.o.l.l... @ViewBag.CustName</h3>
+</div>
+
+
+
